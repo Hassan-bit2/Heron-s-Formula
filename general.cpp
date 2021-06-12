@@ -4,30 +4,15 @@
 
 using namespace std;
 
-Area(int a, int b, int c, int s)
-{
-	cout << "Semi-perimeter of triangle = s = " << int(a + b + c)/2;
-//	cout << "Area of triangle is = " << sqrt(s*(s-a)*(s-b)*(s-c));
-
-}
-A(int a, int b, int c, int s)
-{
-	s = s*(s-a)*(s-b)*(s-c);
-	cout << "Area of triangle is " << sqrt(s);
-}
-
 int main()
 {
-	int a, b, c, s;
-	cout << "Enter the length of sides of triangle\n";
+	float a, b, c, s, area;
+	 
+	cout << "Find area of triangle by Heron's Formula" << endl;
 	cin >> a;
 	cin >> b;
 	cin >> c;
-	Area(a, b, c, s);
-	
-	cin >> a;
-	cin >> b;
-	cin >> c;
-	cin >> s;
-	A(a,b,c,s);
+	s = (a+b+c)/2;
+	area = sqrt(s*(s-a)*(s-b)*(s-c));
+	cout << "Area of triangle is = " << area;
 }
